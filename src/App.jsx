@@ -1,11 +1,14 @@
-import './App.css'
+import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <div>
-      <h1>Hola mundo jee</h1>
+      <NavBar/>
+      <ItemListContainer greeting={'Bienvenidos a G-Tech!'}/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
