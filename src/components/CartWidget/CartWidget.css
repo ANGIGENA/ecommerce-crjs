@@ -1,4 +1,4 @@
-div{
+.content-cart{
     position: relative;
     align-items: center;
 }
@@ -8,7 +8,7 @@ div{
     height: 2rem;
 }
 
-p{
+.circle-number{
     position: absolute;
     top: -4px; 
     right: -6px; 
