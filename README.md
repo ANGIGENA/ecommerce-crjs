@@ -1,8 +1,14 @@
-# React + Vite
+# Ecommerce G-Tech - with ReactJS 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### `Axel Nicolas Gigena` 
 
-Currently, two official plugins are available:
+## Descripcion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto consiste en el desarrollo de una plataforma de comercio electrónico enfocada en la venta de productos tecnológicos, como laptops, smartphones, y más... Espero que les guste. 
+
+## Dependencias
+`firebase` `react-router-dom`  `react-spinners`
+
+## Contacto
+LinkedIn: `Nicolas Gigena` <br>
+Instagram: `@nicogigenaa`

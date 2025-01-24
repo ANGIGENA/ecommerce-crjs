@@ -2,8 +2,8 @@
     display: flex;
     align-items: flex-start;
     width: 100%;
-    height: 100%;
-    background-color: #F5F5F5;
+    min-height: 100vh;
+    background-color: #F5F5F5; 
     gap: 1rem;
 }
 
@@ -50,3 +50,31 @@
     padding: 5px;
     border-radius: 10%;
 }
+
+.buy-finish{
+    display: inline;
+    background-color: #15B0AB;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: .2rem;
+    width: 10rem;
+    margin-left: 1rem;
+    display: flex;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: .2rem;
+    transition: .1s linear;
+    transition: .1s linear;
+}
+
+.buy-finish:hover{
+    background-color: #20fff8;
+    box-shadow: 0 0 2px #20fff8, 0 0 7px #20fff8, 0 0 15px #20fff8, 0 0 30px #20fff8, 0 0 50px #20fff8;
+}
+
+a {
+    all: unset; /* Reinicia todos los estilos predeterminados */
+    display: inline; /* Opcional: Regresa a su comportamiento por defecto */
+  }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./ItemListContainer.css";
-import { getProducts } from "../../data/data.js";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import db from "../../db/db.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList.jsx";
@@ -8,28 +9,56 @@ import { FadeLoader } from "react-spinners";
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const { idCategory } = useParams()
 
-  useEffect(()=>{
-    setLoading(true)
+  const collectionName = collection(db, "products")
 
-    getProducts()
-    .then((data) => {
-      if (idCategory){
-        const filterProducts = data.filter((product)=> product.category === idCategory)
-        setProducts(filterProducts)
-      }else {
-        setProducts(data)
-      }
+  const getProducts = async() =>{
+    try {
+      setLoading(true)
+      const dataDb = await getDocs(collectionName)
+
+      const data = dataDb.docs.map((productDb)=>{
+        return {id: productDb.id, ...productDb.data() }
       })
-      
-    .catch((error) =>
-      {console.error(error)})
-    
-    .finally(() => {
-      setLoading(false)})
+
+      setProducts(data)
+
+    } catch (error) {
+      console.log(error)
+    }finally{
+      setLoading(false)
+    }
+  }
+
+  const getProductsByCategory = async ()=> {
+    try {
+      setLoading(true)
+      const q = query(collectionName, where("category", "==", idCategory))
+      const dataDb = await getDocs(q)
+  
+      const data = dataDb.docs.map((productDb)=>{
+        return {id: productDb.id, ...productDb.data() }
+      })
+  
+      setProducts(data)
+    } catch (error) {
+      console.log(error)
+    }finally{
+      setLoading(false)
+    }
+
+  }
+
+
+  useEffect(()=>{
+    if(idCategory){
+      getProductsByCategory()
+    }else{
+      getProducts()
+    }
   }, [idCategory])
 
   

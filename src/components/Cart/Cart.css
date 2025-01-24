@@ -1,0 +1,133 @@
+.cart{
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-cart{
+    color: white;
+    margin: 1rem;
+    font-size: x-large;
+}
+
+.prod{
+    background-color: white;
+    margin: 1rem;
+    font-weight: bold;
+    display: flex;
+    width: 50rem;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: .1s linear;
+}
+
+.prod:hover{
+    background-color: #20fff8;
+    box-shadow: 0 0 1px #20fff8, 0 0 3px #20fff8, 0 0 7px #20fff8, 0 0 15px #20fff8, 0 0 30px #20fff8;
+}
+
+.img-prod{
+    width: 7rem;
+    height: 7rem;
+    flex: .1;
+}
+
+.btn-del{
+    background-color: red;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font-weight: bold;
+    border-radius: 3rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: .1s linear;
+}
+
+.btn-del:hover{
+    background-color: red;
+    box-shadow: 0 0 1px red, 0 0 3px red, 0 0 7px red, 0 0 15px red, 0 0 30px red;
+}
+
+li{
+    list-style-type: none;
+}
+
+.price-cart{
+    color: white;
+    text-decoration: underline;
+    margin-top: 2rem;
+}
+
+.btn-buy{
+    margin-top: 2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: .1s linear;
+}
+.btn-buy:hover{
+    color: #20fff8;
+}
+
+
+.del-all{
+    margin-top: 2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: .1s linear;
+}
+
+.del-all:hover{
+    color: red;
+}
+
+
+
+.empty-cart{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-title{
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.empty-title-second{
+    color: white;
+    padding-bottom: 10rem;
+}
+
+.empty-back{
+    color: white;
+    text-decoration: underline;
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+.empty-back:hover{
+    color: #20fff8;
+}

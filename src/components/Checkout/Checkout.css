@@ -1,0 +1,25 @@
+.checkout{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-order{
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.num-ord{
+    color: white;
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+.num-ord:hover{
+    color: #20fff8;
+}
